@@ -889,7 +889,7 @@ if pagina=='🏠 Resumen ejecutivo':
  view_data=dict(initial=initial,in_qty=in_qty,stock=float(m['stock_units']),out_qty=out_qty,nc_units=float(m['nc_units']),physical_units=float(m['physical_units']),pending_units=float(m['pending_send_units']),nc_value=float(m['nc_value']),physical_value=float(m['physical_value']),ret=ret_qty,ret_value=value_raw(service_ret),sent=sent_qty,out_other=out_qty-sent_qty,trend=trend_vals,month=month,period=f'{month:02d}/{year}')
  # Renderizar HTML/CSS como documento real, evitando que Markdown muestre etiquetas como texto.
  import streamlit.components.v1 as components
- components.html(executive_ui.CSS + executive_ui.render(view_data), height=690, scrolling=True)
+ components.html(executive_ui.CSS + executive_ui.render(view_data), height=820, scrolling=True)
 elif pagina=='📦 Stock y movimientos':
  st.markdown('<div class="v61-strip">STOCK Y MOVIMIENTOS · 055</div>',unsafe_allow_html=True)
  a,b,c=st.columns(3)
